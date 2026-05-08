@@ -13,9 +13,9 @@
 
 ## Phase 2 - Android setup
 
-- [ ] Create Android project
-- [ ] Set up Kotlin project
-- [ ] Run app on emulator or physical phone
+- [x] Create Android project
+- [x] Set up Java project
+- [x] Run app on emulator or physical phone
 - [ ] Create basic home screen
 
 ## Phase 3 - Camera
