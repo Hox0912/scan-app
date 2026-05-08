@@ -2,7 +2,7 @@ package com.example.scanapp;
 
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         startScanButton = findViewById(R.id.startScanButton);
 
         startScanButton.setOnClickListener(view -> {
-            Toast.makeText(this, "Camera screen coming soon", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+            startActivity(intent);
         });
     }
 }
