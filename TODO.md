@@ -2,21 +2,21 @@
 
 ## Phase 1 - Project setup
 
-- [ ] Create project folder
-- [ ] Initialize Git repository
-- [ ] Create README.md
-- [ ] Create TODO.md
-- [ ] Create CHANGELOG.md
-- [ ] Create docs folder
-- [ ] Create initial GitHub repository
-- [ ] Push first commit to GitHub
+- [x] Create project folder
+- [x] Initialize Git repository
+- [x] Create README.md
+- [x] Create TODO.md
+- [x] Create CHANGELOG.md
+- [x] Create docs folder
+- [x] Create initial GitHub repository
+- [x] Push first commit to GitHub
 
 ## Phase 2 - Android setup
 
 - [x] Create Android project
 - [x] Set up Java project
 - [x] Run app on emulator or physical phone
-- [ ] Create basic home screen
+- [x] Create basic home screen
 
 ## Phase 3 - Camera
 
