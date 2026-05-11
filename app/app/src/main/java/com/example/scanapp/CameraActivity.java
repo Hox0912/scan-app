@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.Toast;
+import android.content.Intent;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -130,11 +131,20 @@ public class CameraActivity extends AppCompatActivity {
                 new ImageCapture.OnImageSavedCallback() {
                     @Override
                     public void onImageSaved(ImageCapture.@NonNull OutputFileResults outputFileResults) {
-                        Toast.makeText(
-                                CameraActivity.this,
-                                "Photo saved",
-                                Toast.LENGTH_SHORT
-                        ).show();
+                        if(outputFileResults.getSavedUri() != null) {
+                            Intent intent = new Intent(CameraActivity.this, PreviewActivity.class);
+                            intent.putExtra(
+                                    PreviewActivity.EXTRA_IMAGE_URI,
+                                    outputFileResults.getSavedUri().toString()
+                            );
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(
+                                    CameraActivity.this,
+                                    "Photo saved, but preview could not be opened",
+                                    Toast.LENGTH_SHORT
+                            ).show();
+                        }
                     }
 
                     @Override
